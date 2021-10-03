@@ -1,0 +1,227 @@
+QUESTION 1:
+      TAKE 10 INTEGER INPUTS FROM USER AND STORE THEM IN AN ARRY AND PRINT THEM ON SCREEN?
+ANS:-
+package javaworks;
+import java.util.Scanner;
+
+public class Pratice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	Scanner s=new Scanner(System.in);
+	System.out.println("Enter the size");
+	int n=s.nextInt();
+	int arr[]=new int[10];
+	System.out.println("Enter the element");
+	for(int i=0;i<n;i++)
+	{
+		arr[i]=s.nextInt();
+	}
+	System.out.println("Enter the store");
+	for(int i=0;i<n;i++)
+	{
+		System.out.print(arr[i]+" ");
+	}
+	
+	}
+
+}
+--------------------------------------------------------------------------
+QUESTION 2:
+    TAKE 10 INTEGER INPUTS FROM USER AND PUT THEM IN ARRAY ,AGAIN ASK USER TO ENTER A NUMBER AND NOW,TELL USER TO CHECK WHETHER THAT NUMBER IS PRESENT IN A ARRAY OR NOT?
+
+ANS:-
+package javaworks;
+import java.util.Scanner;
+
+public class Pratice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	Scanner s=new Scanner(System.in);
+	System.out.println("Enter the size");
+	int a=0;
+	int n=s.nextInt();
+	int arr[]=new int[10];
+	System.out.println("Enter the element");
+	for(int i=0;i<n;i++)
+	{
+		arr[i]=s.nextInt();
+	}
+	System.out.println("Enter the store");
+	for(int i=0;i<n;i++)
+	{
+		System.out.println(arr[i]);
+	}
+	System.out.println("Enter the number to check");
+	int j=s.nextInt();
+	for(int i=0;i<n;i++) {
+	if(arr[i]==j)
+	{a=1;
+		System.out.println("Enter the element is matching with array");
+		break;
+	}
+	if(a==0)
+	{
+		System.out.println("Enter the element is not matching with array");
+		break;
+	}
+	}
+	}
+}
+----------------------------------------------------------------------------------------
+QUESTION 3:-
+     TAKE 20 INTGER INPUTS FROM USER AND PUT THEM IN ARRAY AND PRINT THE FOLLOWING:
+     -NUMBER OF POSITIVE NUMBERS.
+     -NUMBER OF NEGATIVE NUMBERS.
+     -NUMBER OF ODD NUMBERS.
+     -NUMBER OF EVEN NUMBERS.
+     -NUMBER OF 0S.
+ANS:-
+package javaworks;
+import java.util.Scanner;
+
+public class Pratice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	Scanner s=new Scanner(System.in);
+	System.out.println("Enter the size");
+	int n=s.nextInt();
+	int arr[]=new int[10];
+	System.out.println("Enter the element");
+	for(int i=0;i<n;i++)
+	{
+		arr[i]=s.nextInt();
+	}
+	System.out.println("Enter the store");
+	for(int i=0;i<n;i++)
+	{
+		System.out.println(arr[i]);
+	}
+	int zercount=0,poscount=0,negcount=0,oddcount=0,evencount=0;
+	for(int j=0;j<n;j++)
+	{
+	   if(arr[j]>0) {
+		poscount++;
+		}
+	   else if(arr[j]<0){
+			negcount++;
+		    }
+	   else 
+	   {zercount++;  
+	   }
+	   
+	 
+	}
+	   System.out.println("POSITIVE NUMBER"+poscount);
+	   System.out.println("NEGATIVE NUMBER"+negcount);
+	   System.out.println("0's NUMBER"+zercount);
+	   for(int j=0;j<n;j++)
+		{
+		   if(arr[j]%2==0)
+			   evencount++;
+		   else
+			   oddcount++;
+		}
+	   System.out.println("EVEN NUMBER"+evencount);
+	   System.out.println("odd NUMBER"+oddcount);
+	   
+	
+	}
+
+}
+----------------------------------------------------------------
+question 4:TAKE 10 INTEGER INPUTS  FROM USER AND STORE THEM IN AN ARRAY,NOW COPY ALL THE ELEMENT IN AN ANOTHER ARRAY BUT IN REVERSE ORDER?
+ANS:
+package javaworks;
+import java.util.Scanner;
+
+public class Pratice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	Scanner s=new Scanner(System.in);
+	System.out.println("Enter the size");
+	int n=s.nextInt();
+	int arr[]=new int[10];
+	System.out.println("Enter the element");
+	for(int i=0;i<n;i++)
+	{
+		arr[i]=s.nextInt();
+	}
+	System.out.println("Enter the store");
+	for(int i=0;i<n;i++)
+	{
+		System.out.print(arr[i]+"\t");
+	}
+	System.out.println("");
+	System.out.println("enter other reverse array;");
+	int arr2[]=new int[arr.length];
+	for(int j=0;j<n;j++)
+	{
+		arr2[j]=arr[n-j-1];
+		int b=arr2[j];
+		System.out.print(b+"\t");
+	}
+	
+	}
+
+}
+----------------------------------------------------------------------
+question 5:-
+
+package String;
+
+import java.util.Scanner;
+
+public class ArrayEx5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the integers: ");
+           int n=sc.nextInt();
+
+           if(n!=0 && n>0)
+           {
+        	   int arr[]=new int[n];
+           System.out.println("Enter the elements:");
+           for(int i=0;i<arr.length;i++) {
+        	arr[i]=sc.nextInt();
+           }
+           boolean b1=false;
+        System.out.println(" The Given integers are:");
+
+        for(int i=0;i<arr.length;i++) {
+        	int a=arr[i];
+        System.out.print(a+"\t");
+        	 }
+        for(int i=0;i<arr.length/2;i++)
+        {
+        	if(arr[i]!=arr[arr.length-i-1])
+        	{
+        		b1=false;
+        	}
+        	else
+        	{
+        		b1=true;
+        	}
+        }
+        if(b1)
+        {
+        	System.out.println("Array elements are same from front and back");
+        }
+        else
+        {
+        	System.out.println("Array elements are  not same from front and back");
+        }
+           }
+           else
+           {
+        	   System.out.println("Enter valid element");
+        	}
+        	   		sc.close();
+	}
+        	}
+
