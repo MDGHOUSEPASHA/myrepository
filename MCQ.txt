@@ -1,0 +1,365 @@
+question1
+class A { 
+} 
+public class B{ 
+void m1(){ 
+System.out.println("This is method of Class B"); 
+} 
+} 
+public class C{ 
+public static void main(String[] args){ 
+B objB = new B(); 
+System.out.print("This is Class C"); 
+objB.m1(); 
+} 
+} 
+ANS:-
+This is Class C,This is method of Class B.
+REASON:FRST MAIN METHOD WILL BE EXCUTED THEN ITS GOING TO THE OBJECT CLASS.
+
+Question 2
+class A { 
+public static void main(String[] args) { 
+System.out.print("This is Class A"); 
+} 
+} 
+class B { 
+public static void main(String[] args) { 
+System.out.print("This is Class B"); 
+} 
+} 
+class C { 
+public static void main(String[] args) { 
+System.out.print("This is Class C"); 
+} 
+} 
+class D { 
+} 
+ANS:Code successfully compile and Execute.
+REASON: EVERY CLASS HAVING SEPAERTE MAIN METHOD 
+
+Question 3.
+public class DemoTestArrays { 
+public static void main(String[] args) { 
+int arrOne[] = { 1, 2, 3, 4, 5 }; 
+int arrTwo[] = { 0, 0, 0, 0, 0 }; 
+for (int i = 0; i < arrOne.length; i++) { 
+arrTwo[i] = arrOne[arrOne.length - i - 1]; 
+} 
+System.out.println(Arrays.toString(arrTwo)); 
+} 
+} 
+ANS: [5, 4, 3, 2, 1]. 
+REASON:ARRONE POSITION VALUE STORING INTHE ARRTWO
+
+QUESTION 4
+public static void main(String[] args) { 
+String[] elements = { "AAA", "BBB", "CCC" }; 
+String first = (elements.length > 0) ? elements[0] : null; 
+System.out.println(first); 
+} 
+} 
+
+ANS:-AAA
+REASON :CONDITION IS TRUE,ELMENTS[0] IPOSITION IS AAA.
+
+Question 5
+ Is there a destructor for Java? 
+ANS:-
+NONE OF THE ABOVE.
+REASON:I THINK THAT OBJECT IS NO LONGER USED. 
+
+Question 6
+public class ClassMain { 
+public static void main(String[] args) { 
+
+String main = "main is incorrect defined"; 
+System.out.println(main); 
+} 
+} ANS:-.
+ Yes, it compiles and execute because, the character sequence "main" is an identifier.
+
+Question 7
+int count = 0; 
+public static void main(String[] args) { 
+System.out.println(count); 
+} 
+} 
+ANS: Error. 
+REASON:non-static variable count cannot be referenced from a static context
+
+Question 8
+class X { 
+X() { 
+System.out.println(this.hashCode()); 
+} 
+} 
+class Y extends X { 
+Y() { 
+System.out.println(this.hashCode()); 
+} 
+} 
+public class TestClass { 
+public static void main(String[] args) { 
+Y y = new Y(); 
+System.out.println(y.hashCode()); 
+} 
+} 
+ANS:None of the above.
+REASON:error: invalid method declaration; return type required
+
+Question 9
+public class Test { 
+public static double calculation(double a, double b) { 
+if (a == b) { 
+return 0; 
+} else { 
+return 2 / (a - b); 
+} 
+} 
+public static void main(String[] args) { 
+double d1 = Double.MIN_VALUE; 
+double d2 = 2.0 * Double.MIN_VALUE; 
+System.out.println("Result: " + calculation(d1, d2)); 
+} 
+} 
+ANS:INFINITY
+Question 10
+public class Test { 
+public static void main(String[] args) { 
+int j = 0; 
+if ((8 > 4) | (j++ == 7)) 
+System.out.println("j = " + j); 
+} 
+} 
+ANS:1
+REASON :POST INCREMENT IS DONE
+Question 11
+public class Test { 
+public static void main(String[] args) { 
+int[] array = { 1, 2, 3, 4, 5 }; 
+int sum = 0; 
+for (int i : array) 
+sum += ++i; 
+System.out.println(--sum); 
+} 
+} 
+ANS:-
+19
+REASON :WE DOING PRE-INCREMENT AND AT A TIME SUBSTRACTION INCREMENT.
+
+QUESTION 12.
+public class MathTest { 
+public void main(String[] args) { 
+int x = 10 * 10 - 10; 
+System.out.println(++x); 
+} 
+} 
+ANS:RUNTIME ERROR
+REASON:Main method is not static in class MATHTest, please define the main method as:
+QUESTION 13:
+Can we create a user defined immutable class, pick the correct option? 
+ANS:Both A and B are Correct 
+REASON :FINAL VARIABLE VALUE CAN'T CHANGE AT EXCUETION TIME.
+
+QUESTION 14:
+Question: How to define Vector class?? 
+ANS:
+A. Synchronized and Non-serialized 
+REASON :WHICH MEANS ONLY ONE THREAD AT A TIME CAN ACCESS THE CODE.
+
+QUESTION 15:
+public class TestString1 { 
+public static void main(String[] args) { 
+String str = "420"; 
+str += 42; 
+System.out.print(str); 
+} 
+} 
+ANS:
+42024
+REASON:ONLY WE CONCATE THE VALUE WITH THE FRST VALUE,BUT WE CAN NOT ADD THE VALUE; 
+
+QUESTION 16:
+class Test { 
+public static void main(String[] args) { 
+int x = 0; 
+int y = 10; 
+do { 
+y--; 
+++x; 
+} while (x < 5); 
+System.out.print(x + "," + y); 
+} 
+}
+ANS:5,5
+REASON :-DO-WHILE MEANS FIRST IT WILL BE EXCUTE THE CODE THEN ITS CHECK THE CONDTION.
+
+QUESTION 17:
+SAME QUESTION REPEATED IN 17 QUESTION
+
+QUESTION 18:
+What definition exactly match for abstract class? ? 
+A. public abstract class A { 
+public Bark speak(); 
+} 
+REASON :WE CAN CREATE ABSTRACT BEFORE THE CLASS NAME WE USING ABSTRACT KEYWORD.AND ITS SYNTATICALLY CORRECTION.
+
+QUESTION 19:
+class LoopTestDemo { 
+public static void main(String[] args) { 
+int x = 12; 
+while (x < 10) { 
+x--; 
+} 
+System.out.print(x); 
+} 
+} 
+
+ANS:
+X=12;
+REASON:CHECKING THE WHILE CONDITION ,WHILE CONDITION IS 12<10 ITS WRONG ,COMING OUT FROM WHILE ANS EXCUTE THE CODE.
+
+QUESTION 20
+class BitwiseTestDemo { 
+public static void main(String[] args) { 
+int x = 5; 
+int y = 7; 
+System.out.print(((y * 2) % x)); 
+System.out.print(" " + (y % x)); 
+} 
+} 
+ANS:4,2
+REASON:WE CALCULATE AND WE TAKING REMAINDER VALE
+
+QUESTION 21:
+class TestFormatSpecifier { 
+static final long num = 343L; 
+static long testMethod(long num) { 
+System.out.print(++num + " "); 
+return ++num; 
+} 
+public static void main(String[] args) { 
+System.out.print(num + " "); 
+final long num = 340L; 
+new TestString1().testMethod(num); 
+System.out.println(num); 
+} 
+} 
+ANS:ERROR
+RESON:WE CAN NOT FIND THE SYMBOL OF TEST STRING
+
+QUESTION 22:
+public class TestBooleanDemo { 
+public static void main(String[] args) { 
+int x = 5; 
+boolean b1 = true; 
+boolean b2 = false; 
+if ((x == 4) && !b2) 
+System.out.print("1 "); 
+System.out.print("2 "); 
+if ((b2 = true) && b1) 
+System.out.print("3 "); 
+} 
+} 
+ANS:2,3
+REASON:FRST IF CONDITION GOES WRONG,IT PRINT 2,AND OTHER IF CONDITION IS TRUE VALUE STORING IN B2  AND IT CONDITION IS TRUE  PRINT 3.
+
+QUESTION 23:
+public class Test { 
+public void main(String[] args) { 
+int x = 6; 
+Test test = new Test(); 
+test.doSomething(x); 
+System.out.print(" main x = " + x); 
+} 
+void doSomething(int x) { 
+System.out.print(" method x = " + x++); 
+} 
+}
+ANS :ERROR
+REASON :
+
+QUESTION 24:
+class TernanryTestDemo { 
+public static void main(String[] args) { 
+int i = 42;  
+String str = (i < 40) ? "Computer" : (i > 50) ? "Java" : "Everything"; 
+System.out.println(str); 
+} 
+} 
+ANS: EVERYTHING
+RESON:CONDITION IS FALSE,ITS PRINT DEFAULT VALUE IS EVERYTHING.
+
+QUESTION 25:
+REPEATED QUESTION AS QUESTION 24
+
+QUESTION 26:
+class ExceptionTestDemo { 
+public static void main(String[] args) { 
+Float valuePie = new Float(3.14f); 
+try { 
+if (valuePie > 3) 
+System.out.print("Pie value is greater than 3"+", "); 
+else 
+System.out.print("Pie value is not greater than 3"+", "); 
+} catch (Exception e) { 
+e.printStackTrace(); 
+} finally { 
+System.out.println ("Have a nice day."); 
+} 
+} 
+} 
+ANS:Pie value is greater than 3, Have a nice day. 
+REASON:IF CONDITION IS TRUE AND PRINT THE VALUE,FINALLY IT WILL BE EXCUTE THE IMPORTANT CODE
+
+QUESTION 27:
+class TernaryDemo { 
+public static void main(String[] args) { 
+int a = 8; 
+System.out.println ("" + (int) ((a < 8) ? 9.9 : 9)); 
+} 
+} 
+ANS: 9
+RESON:CONDITION IS FALSE,ITS PRINT THE DEFAULT VALUE IS 9.
+
+QUESTION 28:
+class TestDoubleDemo { 
+public static long round(double a) { 
+ if (a != 0x1.fffffffffffffp-2) { 
+  
+ return (long)Math.floor(a + 0.5d); 
+ } else { 
+ return 0; 
+ } 
+} 
+public static void main(String[] args) { 
+TestDoubleDemo t = new TestDoubleDemo(); 
+t.round(2.5); 
+} 
+} 
+ANS:
+
+QUESTION 29:
+ Create a parent class as below 
+class A { 
+private int a = 0; 
+} 
+Which one is tightly encapsulated in the below options 
+ANS:class C extends A { 
+ private int a = 0; 
+} 
+REASON:CLASS C AND CLASS A ARE TIGHTLY ENCAPSULATED CLASSES.
+
+QUESTION 31;
+public class Main { 
+public static void main(String[] args) { 
+Integer x = 400, y = 400; 
+if (x == y) 
+System.out.println("Number is Same"); 
+else 
+System.out.println("Number is Not Same"); 
+} 
+} 
+ANS: NUMBER IS NOT SAME;
+REASON :IT HAVE DIFFERENT ADDREESS VALUE
